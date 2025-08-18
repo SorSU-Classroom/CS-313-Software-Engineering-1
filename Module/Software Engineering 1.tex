@@ -11,6 +11,74 @@
 
 \documentclass[a4paper,11pt,oneside]{book}
 \usepackage{modulestyle}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+
+% Define custom colors for visual elements
+\definecolor{primaryblue}{RGB}{41, 128, 185}
+\definecolor{successgreen}{RGB}{39, 174, 96}
+\definecolor{warningorange}{RGB}{243, 156, 18}
+\definecolor{dangerred}{RGB}{231, 76, 60}
+\definecolor{lightgray}{RGB}{236, 240, 241}
+\definecolor{darkgray}{RGB}{52, 73, 94}
+
+% Custom card environment for key concepts
+\newtcolorbox{conceptcard}[1]{
+    colback=lightgray,
+    colframe=primaryblue,
+    fonttitle=\bfseries,
+    title=#1,
+    arc=4pt,
+    boxrule=2pt,
+    left=8pt,
+    right=8pt,
+    top=8pt,
+    bottom=8pt
+}
+
+% Custom highlight box for important information
+\newtcolorbox{highlightbox}[1]{
+    colback=successgreen!10,
+    colframe=successgreen,
+    fonttitle=\bfseries,
+    title=\faLightbulb\ #1,
+    arc=4pt,
+    boxrule=1pt,
+    left=8pt,
+    right=8pt,
+    top=8pt,
+    bottom=8pt
+}
+
+% Custom warning box
+\newtcolorbox{warningbox}[1]{
+    colback=warningorange!10,
+    colframe=warningorange,
+    fonttitle=\bfseries,
+    title=\faExclamationTriangle\ #1,
+    arc=4pt,
+    boxrule=1pt,
+    left=8pt,
+    right=8pt,
+    top=8pt,
+    bottom=8pt
+}
+
+% Custom example box
+\newtcolorbox{examplebox}[1]{
+    colback=primaryblue!10,
+    colframe=primaryblue,
+    fonttitle=\bfseries,
+    title=\faCode\ #1,
+    arc=4pt,
+    boxrule=1pt,
+    left=8pt,
+    right=8pt,
+    top=8pt,
+    bottom=8pt
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
@@ -67,11 +135,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\BookTitle}{\CourseTitle}
-\newcommand{\BookTitleFootnote}{A course in the \ProgramName}
+\newcommand{\BookTitleFootnote}{A course in the {\ProgramName}}
 
-\newcommand{\BookSubtitle}{A Study Guide for Students of \UniversityName - \CampusName}
+\newcommand{\BookSubtitle}{A Study Guide for Students of {\UniversityName} - {\CampusName}}
 \newcommand{\BookSubtitleFootnote}{This book is a study guide for students of
-\UniversityName - \CampusName taking up the course \CourseTitle.}
+{\UniversityName} - {\CampusName} taking up the course \CourseTitle.}
 
 \newcommand{\BookAuthorFirstName}{Jarrian Vince}
 \newcommand{\BookAuthorLastName}{Gojar}
@@ -127,48 +195,63 @@
 
 \section{What is a Software Development Methodology?}
 
-Software development is a complex process that requires careful planning and
+\textbf{Software development} is a complex process that requires careful planning and
 execution. A software development methodology provides a structured approach to
 managing this complexity, ensuring that projects are delivered on time, within
 budget, and to the required quality. Understanding the purpose and different
 types of methodologies is fundamental to becoming a successful software
-engineer. This lesson will explore what a software development methodology is,
-its benefits, and some initial considerations for choosing the right one for a
-project.
+engineer.
 
 \subsection{What is a Software Development Methodology?}
 
-A software development methodology (SDM) is a framework that is used to
+A \textbf{software development methodology (SDM)} is a framework that is used to
 structure, plan, and control the process of developing an information system.
 It provides a systematic approach to building software, breaking down the work
 into manageable phases. Think of it as a roadmap that guides the development
 team from the initial concept to the final product.
 
+% [IMAGE PLACEHOLDER: Diagram showing the software development lifecycle with phases: Concept → Planning → Design → Development → Testing → Deployment → Maintenance]
+
 \subsection{Key Aspects of a Software Development Methodology}
 
 To fully understand what an SDM is, let's break it down into key aspects:
 
+\begin{conceptcard}{The Five Pillars of Software Development Methodologies}
 \begin{enumerate}
-  \item \textbf{Process}: An SDM defines the steps and activities involved in software development. These steps typically include requirements gathering, design, implementation, testing, deployment, and maintenance.
-  \item \textbf{Structure}: It provides a structure for organizing the development process, specifying the order in which activities should be performed and the relationships between them.
-  \item \textbf{Guidelines}: SDMs offer guidelines and best practices for performing each activity, ensuring consistency and quality throughout the development lifecycle.
-  \item \textbf{Tools and Techniques}: SDMs often recommend or incorporate specific tools and techniques to support the development process, such as project management software, code repositories, and testing frameworks.
-  \item \textbf{Roles and Responsibilities}: A well-defined SDM specifies the roles and responsibilities of each team member, ensuring that everyone knows their part in the project.
+  \item \textbf{\faPlay\ Process}: An SDM defines the steps and activities involved in software development. These steps typically include requirements gathering, design, implementation, testing, deployment, and maintenance.
+  
+  \item \textbf{\faSitemap\ Structure}: It provides a structure for organizing the development process, specifying the order in which activities should be performed and the relationships between them.
+  
+  \item \textbf{\faBook\ Guidelines}: SDMs offer guidelines and best practices for performing each activity, ensuring consistency and quality throughout the development lifecycle.
+  
+  \item \textbf{\faTools\ Tools and Techniques}: SDMs often recommend or incorporate specific tools and techniques to support the development process, such as project management software, code repositories, and testing frameworks.
+  
+  \item \textbf{\faUsers\ Roles and Responsibilities}: A well-defined SDM specifies the roles and responsibilities of each team member, ensuring that everyone knows their part in the project.
 \end{enumerate}
+\end{conceptcard}
+
+% [IMAGE PLACEHOLDER: Infographic showing the 5 key aspects of SDM - Process, Structure, Guidelines, Tools & Techniques, and Roles & Responsibilities with icons and brief descriptions]
 
 \subsection{Why Use a Software Development Methodology?}
 
 There are several compelling reasons why software development teams use
 methodologies:
 
+\begin{highlightbox}{Key Benefits of Using Methodologies}
 \begin{itemize}
-  \item \textbf{Improved Project Success Rates}: By providing a structured approach, SDMs increase the likelihood of delivering projects on time, within budget, and to the required quality.
-  \item \textbf{Enhanced Communication and Collaboration}: SDMs facilitate communication and collaboration among team members, stakeholders, and clients.
-  \item \textbf{Better Risk Management}: SDMs help identify and mitigate potential risks early in the development process.
-  \item \textbf{Increased Efficiency and Productivity}: By streamlining the development process, SDMs improve efficiency and productivity.
-  \item \textbf{Higher Quality Software}: SDMs promote the development of high-quality software that meets the needs of its users.
-  \item \textbf{Predictability}: Methodologies bring predictability to the software development process. This is crucial for planning resources, setting realistic timelines, and managing expectations.
+  \item \textbf{\faChartLine\ Improved Project Success Rates}: By providing a structured approach, SDMs increase the likelihood of delivering projects on time, within budget, and to the required quality.
+  
+  \item \textbf{\faComments\ Enhanced Communication and Collaboration}: SDMs facilitate communication and collaboration among team members, stakeholders, and clients.
+  
+  \item \textbf{\faShield*\ Better Risk Management}: SDMs help identify and mitigate potential risks early in the development process.
+  
+  \item \textbf{\faRocket\ Increased Efficiency and Productivity}: By streamlining the development process, SDMs improve efficiency and productivity.
+  
+  \item \textbf{\faStar\ Higher Quality Software}: SDMs promote the development of high-quality software that meets the needs of its users.
+  
+  \item \textbf{\faClock\ Predictability}: Methodologies bring predictability to the software development process. This is crucial for planning resources, setting realistic timelines, and managing expectations.
 \end{itemize}
+\end{highlightbox}
 
 Let's explore these benefits with examples:
 
@@ -317,12 +400,11 @@ fields, and is a good starting point for understanding the development process.
 
 \subsection{Core Concepts of the Waterfall Methodology}
 
-The Waterfall methodology is a sequential, non-iterative design process. In
-simple terms, this means each phase of the software development lifecycle
-(SDLC) must be completed fully before the next phase can begin. There is no
-overlapping in the waterfall model. This methodology is named "Waterfall"
-because the project flows steadily downwards through these phases, much like a
-waterfall.
+\begin{conceptcard}{What is the Waterfall Methodology?}
+The Waterfall methodology is a \textbf{sequential, non-iterative} design process. Each phase of the software development lifecycle (SDLC) must be \textbf{completed fully} before the next phase can begin. There is \textbf{no overlapping} in the waterfall model. Named ``Waterfall'' because the project flows steadily downwards through phases, much like a waterfall
+\end{conceptcard}
+
+% [IMAGE PLACEHOLDER: Classic Waterfall diagram showing the sequential flow: Requirements → Design → Implementation → Testing → Deployment → Maintenance, with arrows flowing downward like a waterfall]
 
 \subsection{Phases of the Waterfall Methodology}
 
@@ -379,42 +461,46 @@ it is the right choice for a project.
 
 \subsubsection{Advantages}
 
+\begin{highlightbox}{Key Waterfall Advantages}
 \begin{itemize}
-  \item \textbf{Simplicity}: The Waterfall model is easy to understand and implement. Its straightforward approach makes it suitable for projects with well-defined requirements.
+  \item \textbf{\faGraduationCap\ Simplicity}: The Waterfall model is easy to understand and implement. Its straightforward approach makes it suitable for projects with well-defined requirements.
         \begin{itemize}
           \item \textbf{Example}: Building a simple data conversion tool where the input and output formats are known and unlikely to change.
         \end{itemize}
-  \item \textbf{Clear Documentation}: Each phase produces detailed documentation, which makes it easier to understand the project's progress and maintain the system.
+  \item \textbf{\faFile[regular]\ Clear Documentation}: Each phase produces detailed documentation, which makes it easier to understand the project's progress and maintain the system.
         \begin{itemize}
           \item \textbf{Example}: For a regulatory compliance system, comprehensive documentation ensures that all regulatory requirements are met and can be easily audited.
         \end{itemize}
-  \item \textbf{Predictable Costs}: Due to the well-defined nature of the model, it is easier to estimate project costs and timelines.
+  \item \textbf{\faCalculator\ Predictable Costs}: Due to the well-defined nature of the model, it is easier to estimate project costs and timelines.
         \begin{itemize}
           \item \textbf{Example}: Developing a satellite communication system where the budget and schedule are predetermined based on contractual agreements.
         \end{itemize}
-  \item \textbf{Suitable for Stable Requirements}: The Waterfall model works well when the project requirements are fixed and unlikely to change during the development process.
+  \item \textbf{\faLock\ Suitable for Stable Requirements}: The Waterfall model works well when the project requirements are fixed and unlikely to change during the development process.
         \begin{itemize}
           \item \textbf{Example}: Developing embedded systems for automotive applications where the features are strictly defined by industry standards.
         \end{itemize}
 \end{itemize}
+\end{highlightbox}
 
 \subsubsection{Disadvantages}
 
+\begin{warningbox}{Key Waterfall Limitations}
 \begin{itemize}
-  \item \textbf{Inflexibility}: The Waterfall model is not well-suited for projects with evolving requirements. Changes are difficult and expensive to implement once a phase is completed.
+  \item \textbf{\faTimesCircle\ Inflexibility}: The Waterfall model is not well-suited for projects with evolving requirements. Changes are difficult and expensive to implement once a phase is completed.
         \begin{itemize}
           \item \textbf{Example}: Creating a social media platform where user preferences and market trends can quickly change, requiring frequent updates and modifications.
         \end{itemize}
-  \item \textbf{Delayed Testing}: Testing is done at the end of the development cycle, which means that any major issues may not be discovered until late in the process.
+  \item \textbf{\faClock\ Delayed Testing}: Testing is done at the end of the development cycle, which means that any major issues may not be discovered until late in the process.
         \begin{itemize}
           \item \textbf{Example}: For a large enterprise resource planning (ERP) system, finding critical bugs during system testing can result in significant delays and cost overruns.
         \end{itemize}
-  \item \textbf{Limited User Involvement}: Users are typically involved only in the initial requirements gathering phase, which can lead to a mismatch between the system and user needs.
+  \item \textbf{\faEyeSlash\ Limited User Involvement}: Users are typically involved only in the initial requirements gathering phase, which can lead to a mismatch between the system and user needs.
         \begin{itemize}
           \item \textbf{Example}: Building a customer relationship management (CRM) system without continuous feedback from sales and marketing teams can result in a tool that doesn't effectively address their needs.
         \end{itemize}
-  \item \textbf{Risk of "Analysis Paralysis"}: Teams can get bogged down in the initial phases (requirements gathering and design), leading to delays in starting the actual development.
+  \item \textbf{\faPause\ Risk of ``Analysis Paralysis''}: Teams can get bogged down in the initial phases (requirements gathering and design), leading to delays in starting the actual development.
 \end{itemize}
+\end{warningbox}
 
 \subsection{Practical Examples and Demonstrations}
 
@@ -534,10 +620,22 @@ rigid methodologies.
 
 \subsection{Core Principles of Agile Methodology}
 
+\begin{conceptcard}{The Agile Manifesto Core Values}
+\faUsers\ \textbf{Individuals and interactions} over processes and tools
+
+\faCode\ \textbf{Working software} over comprehensive documentation
+
+\faHandshake\ \textbf{Customer collaboration} over contract negotiation
+
+\faSync\ \textbf{Responding to change} over following a plan
+\end{conceptcard}
+
 The Agile Manifesto, published in 2001, outlines the four core values and
 twelve principles that underpin the Agile methodology. These principles serve
 as a guide for Agile teams and influence how they approach software
 development. Let's break down these key concepts:
+
+% [IMAGE PLACEHOLDER: The Agile Manifesto diagram showing the four core values with visual emphasis on "over" comparisons]
 
 \begin{enumerate}
   \item \textbf{Individuals and interactions over processes and tools}: Agile prioritizes direct communication and collaboration among team members over strict adherence to processes and reliance on specific tools. This doesn't mean processes and tools are unimportant, but rather that they should support, not hinder, human interaction.
@@ -648,6 +746,8 @@ flexibility. Here's a table highlighting the key differences:
   \label{tab:waterfall_vs_agile}
 \end{table}
 
+% [IMAGE PLACEHOLDER: Side-by-side visual comparison of Waterfall vs Agile showing sequential vs iterative approaches with icons and timelines]
+
 \textbf{Hypothetical Scenario:}
 
 Imagine developing a mobile app for ordering food.
@@ -707,11 +807,15 @@ development. In this lesson, we'll dive into the core components of Scrum: its
 roles, events, and artifacts. Understanding these elements is crucial for
 effectively implementing Scrum in software development and other projects.
 
+% [IMAGE PLACEHOLDER: Scrum framework overview diagram showing the three pillars (Roles, Events, Artifacts) with interconnected elements]
+
 \subsection{Scrum Roles}
 
 In Scrum, there are three distinct roles, each with specific responsibilities
 and accountabilities. These roles are designed to promote self-organization,
 collaboration, and efficiency within the Scrum team.
+
+% [IMAGE PLACEHOLDER: Scrum roles diagram showing Product Owner, Scrum Master, and Development Team with their key responsibilities listed]
 
 \subsubsection{Product Owner}
 
@@ -828,6 +932,8 @@ Imagine a group of friends organizing a charity event.
 Scrum events are time-boxed meetings that provide structure and opportunities
 for inspection and adaptation. These events are designed to facilitate
 communication, collaboration, and progress toward the Sprint Goal.
+
+% [IMAGE PLACEHOLDER: Scrum Events timeline diagram showing Sprint Planning → Daily Scrum → Sprint Review → Sprint Retrospective in a cyclical pattern within a Sprint timeframe]
 
 \subsubsection{Sprint}
 
@@ -1135,6 +1241,8 @@ components, and how it can be applied to software development projects. You'll
 learn how to create and use Kanban boards, manage workflow, and identify
 bottlenecks.
 
+% [IMAGE PLACEHOLDER: Kanban board example showing columns (To Do, In Progress, Testing, Done) with cards representing tasks flowing from left to right]
+
 \subsection{Core Principles of Kanban}
 
 Kanban operates on a set of core principles that guide its implementation and
@@ -1429,9 +1537,11 @@ A decision matrix can be a helpful tool for comparing different methodologies
 based on the factors discussed above. Here's an example of a simplified
 decision matrix:
 
+% [IMAGE PLACEHOLDER: Visual decision flowchart showing how to choose between Waterfall, Agile, and Kanban based on project characteristics like requirements clarity, team size, and change frequency]
+
 \begin{table}[h!]
   \centering
-  \begin{tabular}{|p{3.5cm}|p{2.5cm}|p{3cm}|p{2.5cm}|}
+  \begin{tabular}{p{3.5cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}}
     \hline
     \textbf{Factor}      & \textbf{Waterfall} & \textbf{Agile (Scrum)} & \textbf{Kanban}       \\
     \hline
