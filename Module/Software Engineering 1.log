@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.7)  18 AUG 2025 11:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.7)  18 AUG 2025 12:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/user/OneDrive/Documents/SorSU/__Repository__/__Template__LaTeX/Module/Module.tex
-(c:/Users/user/OneDrive/Documents/SorSU/__Repository__/__Template__LaTeX/Module/Module.tex
+**"c:/Users/user/OneDrive/Documents/SorSU/__Repository__/CS-313-Software-Engineering-1/Module/Software Engineering 1.tex"
+(c:/Users/user/OneDrive/Documents/SorSU/__Repository__/CS-313-Software-Engineering-1/Module/Software Engineering 1.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
 (c:/texlive/2025/texmf-dist/tex/latex/base/book.cls
@@ -926,8 +926,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 153.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 88.
  (c:/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./Module.aux)
-\openout1 = `Module.aux'.
+) (./Software Engineering 1.aux)
+\openout1 = `"Software Engineering 1.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
 LaTeX Font Info:    ... okay on input line 88.
@@ -1024,9 +1024,9 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring ON on input line 88.
- (./Module.out) (./Module.out)
+ (./Software Engineering 1.out) (./Software Engineering 1.out)
 \@outlinefile=\write4
-\openout4 = `Module.out'.
+\openout4 = `"Software Engineering 1.out"'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
@@ -1107,35 +1107,35 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has b
 l.98 \end{dedication}
                       [1
 
-] (./Module.toc
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 7.
-)
+] (./Software Engineering 1.toc)
 \tf@toc=\write5
-\openout5 = `Module.toc'.
+\openout5 = `"Software Engineering 1.toc"'.
 
 
 
 [2
 
 
-] (./Module.lof)
+] (./Software Engineering 1.lof)
 \tf@lof=\write6
-\openout6 = `Module.lof'.
+\openout6 = `"Software Engineering 1.lof"'.
 
 
 
 [3
 
-] (./Module.lot)
+] (./Software Engineering 1.lot)
 \tf@lot=\write7
-\openout7 = `Module.lot'.
+\openout7 = `"Software Engineering 1.lot"'.
 
 
 
 [4
 
 ]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 120.
+
 
 [1
 
@@ -1172,34 +1172,52 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ]
  6.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 183.
+
+
+[7
+
+]
+ 7.
+
+
+[8
+
+]
+ 8.
+
+
+[9
+
+]
+ 9.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 147.
 (c:/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
-[7
+[10
 
-{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] (./Module.aux)
+{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] (./Software Engineering 1.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
  ***********
-Package rerunfilecheck Info: File `Module.out' has not changed.
-(rerunfilecheck)             Checksum: 9D5B9DD25318DC1D8E3449057F5B4AA3;4661.
+Package rerunfilecheck Info: File `"Software Engineering 1".out' has not changed.
+(rerunfilecheck)             Checksum: 8D347FDC666B0357FB209447E65EF65C;2291.
  ) 
 Here is how much of TeX's memory you used:
- 51142 strings out of 469608
- 1165083 string characters out of 5474780
- 2115621 words of memory out of 5000000
- 77139 multiletter control sequences out of 15000+600000
- 724578 words of font info for 173 fonts, out of 8000000 for 9000
+ 51103 strings out of 469608
+ 1165283 string characters out of 5474780
+ 2108657 words of memory out of 5000000
+ 77121 multiletter control sequences out of 15000+600000
+ 721289 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 132i,11n,135p,1274b,505s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 132i,11n,135p,1304b,505s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Module.pdf (12 pages, 259406 bytes).
+Output written on "Software Engineering 1.pdf" (15 pages, 256979 bytes).
 PDF statistics:
- 284 PDF objects out of 1000 (max. 8388607)
- 246 compressed objects within 3 object streams
- 45 named destinations out of 1000 (max. 500000)
- 56573 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 201 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
+ 54381 words of extra memory for PDF output out of 61914 (max. 10000000)
 
