@@ -1,0 +1,153 @@
+% Create Style for Module
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[
+  top=1in,
+  bottom=1in,
+  left=1in,
+  right=1in
+]{geometry}
+\usepackage{tocbibind}
+\usepackage{blindtext}
+\usepackage{lmodern}    
+\usepackage{multicol}    
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+% \usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{lipsum}
+\usepackage{fancyhdr}
+
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc, arrows,shapes.gates.logic.US,shapes.gates.logic.IEC,calc, matrix}
+\usepackage{pgf-umlcd}
+% \usepackage[simplified]{pgf-umlcd}
+\tikzstyle{branch}=[fill,shape=circle,minimum size=3pt,inner sep=0pt]
+\ctikzset{
+	logic ports=ieee,
+	% logic ports/fill=lightgray
+}
+
+\NewDocumentCommand\Cycle{O{} m m m O{} m}{%
+  % [opt arg cycle]{Node}{Angle}{Node size}[opt arg arch node]{cycle size}
+  \draw[#1](#2.{#3+asin(#6/(#4*1.41))}) arc (180+#3-45:180+#3-45-270:#6/2) #5;
+}
+
+% Karnaugh Map
+\usepackage{karnaugh-map}
+
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{framed}
+\usepackage{amssymb}
+\usepackage{titlesec}
+\usepackage{parskip}
+\setlength{\parskip}{10pt}
+
+\usepackage{multicol}
+\usepackage[figuresright]{rotating}
+\usepackage[english]{babel}
+\usepackage[export]{adjustbox}
+
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{figure}{section}
+
+% Make list items more compact
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+   
+\definecolor{LightGray}{gray}{0.9}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\NeedsTeXFormat{LaTeX2e}%
+
+\ProvidesPackage{modulestyle}[2011/05/07 v1.2a modulestyle]
+
+\DeclareOption{procedia}{\global\elsarticle@nsmodeltrue}
+\newif\ifelsarticle@nsmodel\elsarticle@nsmodelfalse
+%\DeclareOption{round}{%
+%      \renewcommand\NAT@open{} \renewcommand\NAT@close{}}
+%\DeclareOption{authoryear}{\NAT@numbersfalse
+%        \ExecuteOptions{semicolon,nobibstyle}
+%   }
+%  \renewcommand\NAT@open{} \renewcommand\NAT@close{}
+\ProcessOptions
+
+\setlength\parindent{12pt}
+\def\toprule{\\[-6.5pt]\Hline\\[-6.45pt]}
+\def\colrule{\\[-6.5pt]\Hline\\[-6.55pt]}
+\def\botrule{\\[-6.6pt]\Hline\\[-5.2pt]}
+%\def\crule#1{\\[-9pt]\cline{#1}\\[-6.5pt]}
+\def\Hline{%
+   \noalign{\ifnum0=`}\fi\hrule \@height .43pt \futurelet%\@height \arrayrulewidth
+   \@tempa\@xhline
+}
+
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0ex}%
+   {-3.25ex plus -1ex minus -0.2ex}%
+   {1.5ex plus 0.2ex}%
+   {\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\renewcommand{\lstlistingname}{Code}% Change Name
+\renewcommand{\lstlistlistingname}{List of \lstlistingname s}% List of Listings -> List of Algorithms
+
+\lstset{
+   frame=single,
+   language=Java,
+   aboveskip=5mm,
+   belowskip=5mm,
+   framextopmargin=3pt,
+   framexbottommargin=3pt,
+   showstringspaces=false,
+   columns=flexible,
+   basicstyle={\small\ttfamily},
+   numbers=left,
+   numberstyle=\tiny\color{gray},
+   % keywordstyle=\bfseries\color{blue},
+   % commentstyle=\color{dkgreen},
+   stringstyle=\color{mauve},
+   tabsize=3,
+   captionpos=b,
+   extendedchars=true,
+   % Config
+   showspaces=false,
+   showtabs=false,
+   breaklines=true,
+   showstringspaces=false,
+   breakatwhitespace=true,
+   commentstyle=\color{pgreen},
+   keywordstyle=\color{pblue},
+   % stringstyle=\color{pred},
+   basicstyle=\ttfamily,
+   moredelim=[il][\textcolor{pgrey}]{$$},
+   moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+ 
+\hypersetup{
+   colorlinks,
+   linkcolor={blue},
+   citecolor={blue},
+   urlcolor={blue}
+}

@@ -1,0 +1,6 @@
+**/**.fls
+/.metadata/
+.metadata/
+samples/
+**/com/**/Exercises/
+**/**Exam/
