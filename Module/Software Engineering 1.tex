@@ -80,6 +80,20 @@
     bottom=8pt
 }
 
+% Custom small example card for inline examples
+\newtcolorbox{examplecard}[1]{
+    colback=dangerred!5,
+    colframe=dangerred!80,
+    fonttitle=\bfseries\small,
+    title=\faLightbulb\ #1,
+    arc=3pt,
+    boxrule=1pt,
+    left=6pt,
+    right=6pt,
+    top=4pt,
+    bottom=4pt
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -255,29 +269,17 @@ methodologies:
 
 Let's explore these benefits with examples:
 
-\textbf{Example 1: Avoiding Scope Creep}
+\begin{examplebox}{Avoiding Scope Creep}
+Imagine a project to build an e-commerce website. Without a methodology, the client might continuously add new features during development (scope creep). This can lead to delays, increased costs, and a frustrated development team. A methodology like Agile, with its iterative approach and regular feedback loops, allows for managing changes in scope more effectively.
+\end{examplebox}
 
-Imagine a project to build an e-commerce website. Without a methodology, the
-client might continuously add new features during development (scope creep).
-This can lead to delays, increased costs, and a frustrated development team. A
-methodology like Agile, with its iterative approach and regular feedback loops,
-allows for managing changes in scope more effectively.
+\begin{examplebox}{Improved Communication}
+Consider a team working on a mobile application. Without a defined methodology, the designers, developers, and testers might have different understandings of the requirements. This can result in miscommunication, rework, and ultimately, a lower-quality product. An SDM promotes clear communication through defined processes and documentation.
+\end{examplebox}
 
-\textbf{Example 2: Improved Communication}
-
-Consider a team working on a mobile application. Without a defined methodology,
-the designers, developers, and testers might have different understandings of
-the requirements. This can result in miscommunication, rework, and ultimately,
-a lower-quality product. An SDM promotes clear communication through defined
-processes and documentation.
-
-\textbf{Example 3: Risk Mitigation}
-
-Suppose a company is developing a new financial software. Without a proper
-methodology, they might not identify critical security vulnerabilities until
-late in the development cycle. This could lead to significant financial losses
-and reputational damage. Methodologies that incorporate risk assessment and
-mitigation strategies help prevent such issues.
+\begin{examplebox}{Risk Mitigation}
+Suppose a company is developing a new financial software. Without a proper methodology, they might not identify critical security vulnerabilities until late in the development cycle. This could lead to significant financial losses and reputational damage. Methodologies that incorporate risk assessment and mitigation strategies help prevent such issues.
+\end{examplebox}
 
 \subsection{Hypothetical Scenario: University Course Registration System}
 
@@ -410,49 +412,69 @@ The Waterfall methodology is a \textbf{sequential, non-iterative} design process
 
 The Waterfall methodology typically consists of the following phases:
 
+\begin{conceptcard}{Waterfall Methodology Phases}
 \begin{enumerate}
   \item \textbf{Requirements Gathering and Analysis}: This is the initial phase where all possible requirements for the system to be designed are captured. These requirements are then documented in a requirement specification document.
-        \begin{itemize}
-          \item \textbf{Example}: Meeting with stakeholders to define the functionalities of an e-commerce website, documenting features like user accounts, product catalog, shopping cart, and payment gateway integration.
-        \end{itemize}
+        
+        \begin{examplecard}{E-Commerce Website Requirements}
+        Meeting with stakeholders to define the functionalities of an e-commerce website, documenting features like user accounts, product catalog, shopping cart, and payment gateway integration.
+        \end{examplecard}
+        
   \item \textbf{System Design}: The requirements from the first phase are used to design the system. This includes architectural design, database design, interface design, and more.
-        \begin{itemize}
-          \item \textbf{Example}: Creating a database schema for the e-commerce website, outlining tables for products, users, orders, and categories. Defining the UI/UX for the website, including page layouts and navigation.
-        \end{itemize}
+        
+        \begin{examplecard}{Database and UI Design}
+        Creating a database schema for the e-commerce website, outlining tables for products, users, orders, and categories. Defining the UI/UX for the website, including page layouts and navigation.
+        \end{examplecard}
+        
   \item \textbf{Implementation}: The actual coding of the system takes place in this phase. The design documents are translated into executable code.
-        \begin{itemize}
-          \item \textbf{Example}: Writing the HTML, CSS, and JavaScript code to create the front-end of the website. Implementing the back-end using a language like Python or Java to handle user authentication, product listings, and order processing.
-        \end{itemize}
+        
+        \begin{examplecard}{Frontend and Backend Development}
+        Writing the HTML, CSS, and JavaScript code to create the front-end of the website. Implementing the back-end using a language like Python or Java to handle user authentication, product listings, and order processing.
+        \end{examplecard}
+        
   \item \textbf{Testing}: The system is tested to verify that it meets the requirements specified in the first phase. Different types of testing, such as unit testing, integration testing, and system testing, are performed.
-        \begin{itemize}
-          \item \textbf{Example}: Testing user registration and login functionalities. Verifying that products can be added to the shopping cart and that the checkout process works correctly. Performing load testing to ensure the website can handle a large number of concurrent users.
-        \end{itemize}
+        
+        \begin{examplecard}{Comprehensive Testing Process}
+        Testing user registration and login functionalities. Verifying that products can be added to the shopping cart and that the checkout process works correctly. Performing load testing to ensure the website can handle a large number of concurrent users.
+        \end{examplecard}
+        
   \item \textbf{Deployment}: The system is deployed to the production environment and made available to users.
-        \begin{itemize}
-          \item \textbf{Example}: Deploying the e-commerce website to a web server and configuring the domain name. Setting up a database server to store the website's data.
-        \end{itemize}
+        
+        \begin{examplecard}{Production Deployment}
+        Deploying the e-commerce website to a web server and configuring the domain name. Setting up a database server to store the website's data.
+        \end{examplecard}
+        
   \item \textbf{Maintenance}: After deployment, the system is maintained to fix any issues that arise, improve performance, and add new features.
-        \begin{itemize}
-          \item \textbf{Example}: Monitoring the website for errors and performance issues. Fixing bugs reported by users. Adding new features, such as a customer review system or a loyalty program.
-        \end{itemize}
+        
+        \begin{examplecard}{Ongoing System Maintenance}
+        Monitoring the website for errors and performance issues. Fixing bugs reported by users. Adding new features, such as a customer review system or a loyalty program.
+        \end{examplecard}
 \end{enumerate}
+\end{conceptcard}
 
 \subsection{Key Principles}
 
+\begin{conceptcard}{Core Principles of Waterfall Methodology}
 \begin{itemize}
   \item \textbf{Sequential Progression}: Each phase must be completed before the next one begins. There is no going back to a previous phase once it is completed.
-        \begin{itemize}
-          \item \textbf{Example}: In developing a banking application, the design phase cannot start until all the requirements, such as account management, transaction processing, and security features, are fully documented and approved.
-        \end{itemize}
+        
+        \begin{examplecard}{Banking Application Development}
+        In developing a banking application, the design phase cannot start until all the requirements, such as account management, transaction processing, and security features, are fully documented and approved.
+        \end{examplecard}
+        
   \item \textbf{Documentation}: Comprehensive documentation is created at each phase, serving as a blueprint for the subsequent phases.
-        \begin{itemize}
-          \item \textbf{Example}: For a hospital management system, detailed documents would include requirement specifications, system design documents, test plans, user manuals, and maintenance logs.
-        \end{itemize}
+        
+        \begin{examplecard}{Hospital Management System Documentation}
+        For a hospital management system, detailed documents would include requirement specifications, system design documents, test plans, user manuals, and maintenance logs.
+        \end{examplecard}
+        
   \item \textbf{Rigid Structure}: The Waterfall model follows a strict, inflexible structure. Changes to requirements are difficult and costly to implement once a phase is completed.
-        \begin{itemize}
-          \item \textbf{Example}: If, halfway through the implementation of a payroll system, a new government regulation requires a change in tax calculation, it would be very difficult and expensive to incorporate that change without restarting the process.
-        \end{itemize}
+        
+        \begin{examplecard}{Payroll System Regulation Change}
+        If, halfway through the implementation of a payroll system, a new government regulation requires a change in tax calculation, it would be very difficult and expensive to incorporate that change without restarting the process.
+        \end{examplecard}
 \end{itemize}
+\end{conceptcard}
 
 \subsection{Advantages and Disadvantages}
 
@@ -464,21 +486,21 @@ it is the right choice for a project.
 \begin{highlightbox}{Key Waterfall Advantages}
 \begin{itemize}
   \item \textbf{\faGraduationCap\ Simplicity}: The Waterfall model is easy to understand and implement. Its straightforward approach makes it suitable for projects with well-defined requirements.
-        \begin{itemize}
-          \item \textbf{Example}: Building a simple data conversion tool where the input and output formats are known and unlikely to change.
-        \end{itemize}
+        \begin{examplecard}{Data Conversion Tool}
+          Building a simple data conversion tool where the input and output formats are known and unlikely to change demonstrates the simplicity advantage of Waterfall.
+        \end{examplecard}
   \item \textbf{\faFile[regular]\ Clear Documentation}: Each phase produces detailed documentation, which makes it easier to understand the project's progress and maintain the system.
-        \begin{itemize}
-          \item \textbf{Example}: For a regulatory compliance system, comprehensive documentation ensures that all regulatory requirements are met and can be easily audited.
-        \end{itemize}
+        \begin{examplecard}{Regulatory Compliance System}
+          For a regulatory compliance system, comprehensive documentation ensures that all regulatory requirements are met and can be easily audited.
+        \end{examplecard}
   \item \textbf{\faCalculator\ Predictable Costs}: Due to the well-defined nature of the model, it is easier to estimate project costs and timelines.
-        \begin{itemize}
-          \item \textbf{Example}: Developing a satellite communication system where the budget and schedule are predetermined based on contractual agreements.
-        \end{itemize}
+        \begin{examplecard}{Satellite Communication System}
+          Developing a satellite communication system where the budget and schedule are predetermined based on contractual agreements showcases predictable costs.
+        \end{examplecard}
   \item \textbf{\faLock\ Suitable for Stable Requirements}: The Waterfall model works well when the project requirements are fixed and unlikely to change during the development process.
-        \begin{itemize}
-          \item \textbf{Example}: Developing embedded systems for automotive applications where the features are strictly defined by industry standards.
-        \end{itemize}
+        \begin{examplecard}{Automotive Embedded Systems}
+          Developing embedded systems for automotive applications where the features are strictly defined by industry standards illustrates stable requirements.
+        \end{examplecard}
 \end{itemize}
 \end{highlightbox}
 
@@ -487,17 +509,17 @@ it is the right choice for a project.
 \begin{warningbox}{Key Waterfall Limitations}
 \begin{itemize}
   \item \textbf{\faTimesCircle\ Inflexibility}: The Waterfall model is not well-suited for projects with evolving requirements. Changes are difficult and expensive to implement once a phase is completed.
-        \begin{itemize}
-          \item \textbf{Example}: Creating a social media platform where user preferences and market trends can quickly change, requiring frequent updates and modifications.
-        \end{itemize}
+        \begin{examplecard}{Social Media Platform}
+          Creating a social media platform where user preferences and market trends can quickly change, requiring frequent updates and modifications demonstrates the inflexibility issue.
+        \end{examplecard}
   \item \textbf{\faClock\ Delayed Testing}: Testing is done at the end of the development cycle, which means that any major issues may not be discovered until late in the process.
-        \begin{itemize}
-          \item \textbf{Example}: For a large enterprise resource planning (ERP) system, finding critical bugs during system testing can result in significant delays and cost overruns.
-        \end{itemize}
+        \begin{examplecard}{ERP System Testing}
+          For a large enterprise resource planning (ERP) system, finding critical bugs during system testing can result in significant delays and cost overruns.
+        \end{examplecard}
   \item \textbf{\faEyeSlash\ Limited User Involvement}: Users are typically involved only in the initial requirements gathering phase, which can lead to a mismatch between the system and user needs.
-        \begin{itemize}
-          \item \textbf{Example}: Building a customer relationship management (CRM) system without continuous feedback from sales and marketing teams can result in a tool that doesn't effectively address their needs.
-        \end{itemize}
+        \begin{examplecard}{CRM Development Issues}
+          Building a customer relationship management (CRM) system without continuous feedback from sales and marketing teams can result in a tool that doesn't effectively address their needs.
+        \end{examplecard}
   \item \textbf{\faPause\ Risk of ``Analysis Paralysis''}: Teams can get bogged down in the initial phases (requirements gathering and design), leading to delays in starting the actual development.
 \end{itemize}
 \end{warningbox}
@@ -509,9 +531,10 @@ project and its application in different contexts.
 
 \subsubsection{Example 1: Building a Simple Mobile App}
 
-Imagine you are tasked with developing a basic mobile app for tracking daily
-water intake. The requirements are clear:
+\begin{examplebox}{Water Intake Tracking App Development}
+\textbf{Scenario:} Imagine you are tasked with developing a basic mobile app for tracking daily water intake. 
 
+\textbf{Requirements:}
 \begin{itemize}
   \item User can set a daily water intake goal.
   \item User can log the amount of water consumed throughout the day.
@@ -519,8 +542,7 @@ water intake. The requirements are clear:
   \item The app sends reminders to drink water at specified intervals.
 \end{itemize}
 
-Using the Waterfall methodology, the process would look like this:
-
+\textbf{Using the Waterfall methodology:}
 \begin{enumerate}
   \item \textbf{Requirements Gathering and Analysis}: Document all the above requirements in detail, including specific data formats, reminder settings, and UI preferences.
   \item \textbf{System Design}: Design the app's architecture, including the database structure (if needed), UI layouts, and algorithms for calculating progress and scheduling reminders.
@@ -529,12 +551,14 @@ Using the Waterfall methodology, the process would look like this:
   \item \textbf{Deployment}: Deploy the app to the app stores (e.g., Google Play Store, Apple App Store).
   \item \textbf{Maintenance}: Monitor the app for bugs and issues, and release updates as needed.
 \end{enumerate}
+\end{examplebox}
 
 \subsubsection{Example 2: Developing an Enterprise Resource Planning (ERP) System}
 
-A large manufacturing company needs to develop an ERP system to manage its
-operations, including inventory, supply chain, finance, and human resources.
+\begin{examplebox}{ERP System Development for Manufacturing Company}
+\textbf{Scenario:} A large manufacturing company needs to develop an ERP system to manage its operations, including inventory, supply chain, finance, and human resources.
 
+\textbf{Waterfall Implementation Process:}
 \begin{enumerate}
   \item \textbf{Requirements Gathering and Analysis}: Conduct extensive interviews with stakeholders from each department to gather detailed requirements. Document these requirements in a comprehensive specification document.
   \item \textbf{System Design}: Design the system architecture, including database schemas, module interfaces, and integration points. Create detailed design documents for each module.
@@ -543,13 +567,14 @@ operations, including inventory, supply chain, finance, and human resources.
   \item \textbf{Deployment}: Deploy the ERP system to the company's servers and train employees on how to use it.
   \item \textbf{Maintenance}: Provide ongoing maintenance and support for the ERP system, including bug fixes, performance improvements, and new feature development.
 \end{enumerate}
+\end{examplebox}
 
 \subsubsection{Hypothetical Scenario: Government Infrastructure Project}
 
-Consider a government project to build a new bridge. The Waterfall methodology
-might be suitable here because the requirements are typically well-defined and
-unlikely to change significantly during the construction process. The phases
-would include:
+\begin{examplebox}{Bridge Construction Project}
+\textbf{Scenario:} Consider a government project to build a new bridge. The Waterfall methodology might be suitable here because the requirements are typically well-defined and unlikely to change significantly during the construction process.
+
+\textbf{Implementation Phases:}
 
 \begin{enumerate}
   \item \textbf{Requirements Gathering and Analysis}: Defining the bridge's specifications, such as length, width, load capacity, and materials.
@@ -559,6 +584,7 @@ would include:
   \item \textbf{Deployment}: Opening the bridge to public use.
   \item \textbf{Maintenance}: Performing regular maintenance and repairs to ensure the bridge remains safe and functional.
 \end{enumerate}
+\end{examplebox}
 
 \subsection{Exercises and Practice Activities}
 
@@ -637,50 +663,58 @@ development. Let's break down these key concepts:
 
 % [IMAGE PLACEHOLDER: The Agile Manifesto diagram showing the four core values with visual emphasis on "over" comparisons]
 
+\begin{conceptcard}{Detailed Agile Manifesto Values Explained}
 \begin{enumerate}
   \item \textbf{Individuals and interactions over processes and tools}: Agile prioritizes direct communication and collaboration among team members over strict adherence to processes and reliance on specific tools. This doesn't mean processes and tools are unimportant, but rather that they should support, not hinder, human interaction.
-        \begin{itemize}
-          \item \textbf{Example}: Instead of relying solely on a complex issue tracking system, an Agile team might prefer daily stand-up meetings to discuss progress and roadblocks, fostering quicker problem-solving and knowledge sharing.
-          \item \textbf{Counterexample}: A team rigidly following a predefined process without adapting to the skills and needs of individual members, or becoming overly reliant on a single tool that limits flexibility, is not truly embracing the Agile spirit.
-        \end{itemize}
+        
+        \begin{examplecard}{Daily Stand-up vs Complex Tracking}
+        Instead of relying solely on a complex issue tracking system, an Agile team might prefer daily stand-up meetings to discuss progress and roadblocks, fostering quicker problem-solving and knowledge sharing.
+        \end{examplecard}
 
   \item \textbf{Working software over comprehensive documentation}: Agile emphasizes delivering functional software as the primary measure of progress, rather than spending excessive time on detailed documentation that may become outdated quickly. While documentation is still important, it should be concise, relevant, and focused on supporting the software.
-        \begin{itemize}
-          \item \textbf{Example}: In Agile, creating a functional prototype that demonstrates core features and can be tested by users is valued more than writing a lengthy requirements document that may not accurately reflect the user's needs.
-          \item \textbf{Counterexample}: A team that spends weeks creating detailed design documents before writing any code, only to find that the requirements have changed, is not embracing the Agile principle of delivering working software early and often.
-        \end{itemize}
+        
+        \begin{examplecard}{Functional Prototype vs Lengthy Documents}
+        In Agile, creating a functional prototype that demonstrates core features and can be tested by users is valued more than writing a lengthy requirements document that may not accurately reflect the user's needs.
+        \end{examplecard}
 
   \item \textbf{Customer collaboration over contract negotiation}: Agile emphasizes continuous collaboration with the customer throughout the development process to ensure that the software meets their evolving needs. This involves actively seeking feedback, incorporating suggestions, and adapting the software accordingly.
-        \begin{itemize}
-          \item \textbf{Example}: An Agile team regularly demonstrates working software to the customer and solicits feedback. They incorporate this feedback into subsequent iterations, ensuring that the final product aligns closely with the customer's expectations.
-          \item \textbf{Counterexample}: A team that defines all requirements upfront in a rigid contract and avoids further communication with the customer throughout development is not embracing the Agile principle of customer collaboration.
-        \end{itemize}
+        
+        \begin{examplecard}{Regular Demos and Feedback}
+        An Agile team regularly demonstrates working software to the customer and solicits feedback. They incorporate this feedback into subsequent iterations, ensuring that the final product aligns closely with the customer's expectations.
+        \end{examplecard}
 
   \item \textbf{Responding to change over following a plan}: Agile recognizes that change is inevitable in software development and embraces the ability to adapt to changing requirements throughout the project lifecycle. This involves being flexible, responsive, and willing to adjust plans as needed.
-        \begin{itemize}
-          \item \textbf{Example}: An Agile team discovers a critical flaw in their initial design during testing. Instead of sticking to the original plan, they quickly adapt their design to address the flaw, minimizing its impact on the project schedule.
-          \item \textbf{Counterexample}: A team rigidly adhering to a predefined project plan, even when faced with significant changes in requirements or technology, is not embracing the Agile principle of responding to change.
-        \end{itemize}
+        
+        \begin{examplecard}{Adaptive Design Approach}
+        An Agile team discovers a critical flaw in their initial design during testing. Instead of sticking to the original plan, they quickly adapt their design to address the flaw, minimizing its impact on the project schedule.
+        \end{examplecard}
 \end{enumerate}
+\end{conceptcard}
 
 \subsection{Iterative and Incremental Development}
 
 At the heart of Agile lies iterative and incremental development. These two
 concepts are closely related but distinct:
 
+\begin{conceptcard}{Iterative and Incremental Development}
 \begin{itemize}
   \item \textbf{Iterative Development}: This involves breaking down the project into smaller cycles called iterations (often called Sprints in Scrum). Each iteration involves planning, designing, implementing, testing, and evaluating a portion of the software. The results of each iteration are then used to refine the requirements and design for subsequent iterations.
-        \begin{itemize}
-          \item \textbf{Example}: An e-commerce website is developed in iterations. The first iteration might focus on implementing the basic product catalog and browsing functionality. The second iteration might add user accounts and a shopping cart. The third iteration might implement payment processing and order management.
-          \item \textbf{Benefits}: Early feedback, reduced risk, continuous improvement.
-        \end{itemize}
+        
+        \begin{examplecard}{E-Commerce Website Development Iterations}
+        An e-commerce website is developed in iterations. The first iteration might focus on implementing the basic product catalog and browsing functionality. The second iteration might add user accounts and a shopping cart. The third iteration might implement payment processing and order management.
+        \end{examplecard}
+        
+        \textbf{Benefits}: Early feedback, reduced risk, continuous improvement.
 
   \item \textbf{Incremental Development}: This involves delivering small, functional pieces of the software in each iteration. Each increment adds new functionality to the existing software, gradually building up the complete product.
-        \begin{itemize}
-          \item \textbf{Example}: Each iteration of the e-commerce website delivers a fully functional increment of the software. The first increment allows users to browse the product catalog. The second increment allows users to add products to a shopping cart. The third increment allows users to complete the checkout process.
-          \item \textbf{Benefits}: Early value delivery, reduced complexity, easier testing.
-        \end{itemize}
+        
+        \begin{examplecard}{Functional Increments Delivery}
+        Each iteration of the e-commerce website delivers a fully functional increment of the software. The first increment allows users to browse the product catalog. The second increment allows users to add products to a shopping cart. The third increment allows users to complete the checkout process.
+        \end{examplecard}
+        
+        \textbf{Benefits}: Early value delivery, reduced complexity, easier testing.
 \end{itemize}
+\end{conceptcard}
 
 The combination of iterative and incremental development allows Agile teams to
 deliver value early and often, respond quickly to change, and continuously
@@ -692,29 +726,34 @@ Agile offers numerous benefits over traditional methodologies, including:
 
 \begin{itemize}
   \item \textbf{Increased Customer Satisfaction}: Continuous customer collaboration and early delivery of working software lead to higher customer satisfaction. Customers have the opportunity to provide feedback throughout the development process, ensuring that the final product meets their needs.
-        \begin{itemize}
-          \item \textbf{Example}: A customer sees a demo of the software after each iteration and provides feedback. The team incorporates this feedback into the next iteration, ensuring that the software evolves to meet the customer's changing needs.
-        \end{itemize}
+        \begin{examplecard}{Customer Feedback Integration}
+          A customer sees a demo of the software after each iteration and provides feedback. The team incorporates this feedback into the next iteration, ensuring that the software evolves to meet the customer's changing needs.
+        \end{examplecard}
 
   \item \textbf{Improved Product Quality}: Iterative development and continuous testing help to identify and fix defects early in the development process, leading to improved product quality.
-        \begin{itemize}
-          \item \textbf{Example}: Automated tests are run after each iteration to ensure that the software meets the required quality standards. Defects are fixed immediately, preventing them from accumulating and causing more serious problems later in the project.
-        \end{itemize}
+
+        \begin{examplecard}{Automated Testing Benefits}
+          Automated tests are run after each iteration to ensure that the software meets the required quality standards. Defects are fixed immediately, preventing them from accumulating and causing more serious problems later in the project.
+        \end{examplecard}
 
   \item \textbf{Increased Project Visibility}: Agile methodologies emphasize transparency and communication, providing stakeholders with increased visibility into the project's progress.
-        \begin{itemize}
-          \item \textbf{Example}: Daily stand-up meetings, sprint reviews, and burndown charts provide stakeholders with a clear picture of the project's status and any potential risks.
-        \end{itemize}
+
+        \begin{examplecard}{Project Transparency}
+          Daily stand-up meetings, sprint reviews, and burndown charts provide stakeholders with a clear picture of the project's status and any potential risks.
+        \end{examplecard}
 
   \item \textbf{Reduced Risk}: Early and frequent delivery of working software reduces the risk of delivering a product that does not meet the customer's needs or that is not of sufficient quality.
-        \begin{itemize}
-          \item \textbf{Example}: The team identifies and addresses potential risks early in the project, preventing them from escalating into major problems. Regular demos allow the customer to validate the software and identify any areas that need improvement.
-        \end{itemize}
+
+        \begin{examplecard}{Early Risk Management}
+          The team identifies and addresses potential risks early in the project, preventing them from escalating into major problems. Regular demos allow the customer to validate the software and identify any areas that need improvement.
+        \end{examplecard}
 
   \item \textbf{Increased Team Morale}: Agile methodologies empower teams to make decisions and take ownership of their work, leading to increased team morale and productivity.
-        \begin{itemize}
-          \item \textbf{Example}: Self-organizing teams are empowered to make decisions about how to best implement the software. This autonomy leads to increased team morale and a greater sense of ownership.
-        \end{itemize}
+
+        \begin{examplecard}{Self-Organizing Teams}
+          Self-organizing teams are empowered to make decisions about how to best implement the software. This autonomy leads to increased team morale and a greater sense of ownership.
+        \end{examplecard}
+
 \end{itemize}
 
 \subsection{Comparing Agile to Waterfall}
@@ -834,15 +873,9 @@ reflects the desired features, enhancements, and fixes.
   \item \textbf{Accepting or Rejecting Work Results}: At the end of each Sprint, the Product Owner reviews the work completed by the Development Team and decides whether to accept or reject it based on the Definition of Done (which we'll discuss later).
 \end{itemize}
 
-\textbf{Example Scenario:}
-
-Imagine a college project to develop a mobile application for students to find
-study groups. The Product Owner, Sarah, would gather requirements from students
-(the users) about the app's features: creating profiles, searching for groups,
-scheduling meetings, etc. She would then create a Product Backlog listing these
-features, prioritizing them based on which features would provide the most
-value to the students first. For instance, the ability to search for study
-groups might be prioritized higher than creating detailed profiles.
+\begin{examplecard}{Study Group App Product Owner Scenario}
+Imagine a college project to develop a mobile application for students to find study groups. The Product Owner, Sarah, would gather requirements from students (the users) about the app's features: creating profiles, searching for groups, scheduling meetings, etc. She would then create a Product Backlog listing these features, prioritizing them based on which features would provide the most value to the students first. For instance, the ability to search for study groups might be prioritized higher than creating detailed profiles.
+\end{examplecard}
 
 \subsubsection{Scrum Master}
 
@@ -898,34 +931,32 @@ are also responsible for ensuring the quality of the app by adhering to a
 Definition of Done, which might include writing unit tests and conducting user
 testing.
 
-\textbf{Real-World Example}
-
-Consider a software company developing a new e-commerce platform.
-
+\begin{examplecard}{E-Commerce Platform Development}
+Consider a software company developing a new e-commerce platform:
 \begin{itemize}
   \item \textbf{Product Owner}: Responsible for defining the features of the platform, prioritizing them based on customer needs and business value, and managing the Product Backlog.
   \item \textbf{Scrum Master}: Ensures the Scrum team follows Scrum principles, facilitates Scrum events, removes impediments, and coaches the team.
   \item \textbf{Development Team}: Designs, develops, tests, and delivers the features of the e-commerce platform.
 \end{itemize}
+\end{examplecard}
 
-Another example could be a marketing agency managing a client's advertising
-campaign.
-
+\begin{examplecard}{Marketing Agency Campaign}
+A marketing agency managing a client's advertising campaign:
 \begin{itemize}
   \item \textbf{Product Owner}: Defines the goals of the campaign, prioritizes marketing activities, and manages the campaign backlog.
   \item \textbf{Scrum Master}: Facilitates the campaign planning, removes obstacles, and ensures the team adheres to the Scrum framework.
   \item \textbf{Development Team}: Creates advertising content, manages ad spend, and analyzes campaign performance.
 \end{itemize}
+\end{examplecard}
 
-\textbf{Hypothetical Scenario}
-
-Imagine a group of friends organizing a charity event.
-
+\begin{examplecard}{Charity Event Organization}
+Imagine a group of friends organizing a charity event:
 \begin{itemize}
   \item \textbf{Product Owner}: Decides on the type of event, sets fundraising goals, and prioritizes tasks like securing a venue, sponsors, and entertainment.
   \item \textbf{Scrum Master}: Helps the group follow a structured process, facilitates planning meetings, and removes obstacles such as difficulty contacting potential sponsors.
   \item \textbf{Development Team}: Handles various tasks like marketing, logistics, volunteer coordination, and fundraising.
 \end{itemize}
+\end{examplecard}
 
 \subsection{Scrum Events}
 
@@ -950,12 +981,9 @@ Backlog items and deliver a potentially releasable Increment of the product.
   \item \textbf{No Changes to Goal}: While the Development Team can make some adjustments to the Sprint Backlog, the Sprint Goal remains fixed.
 \end{itemize}
 
-\textbf{Example Scenario:}
-
-In the college project, a Sprint might be two weeks long. The Sprint Goal could
-be to "Develop a functional prototype of the study group search feature."
-During this Sprint, the Development Team would focus solely on designing,
-building, and testing this feature.
+\begin{examplecard}{College Project Sprint Example}
+In the college project, a Sprint might be two weeks long. The Sprint Goal could be to ``Develop a functional prototype of the study group search feature.'' During this Sprint, the Development Team would focus solely on designing, building, and testing this feature.
+\end{examplecard}
 
 \subsubsection{Sprint Planning}
 
@@ -971,14 +999,9 @@ performed during the Sprint.
   \item \textbf{Defining the Sprint Goal}: The Scrum Team defines the Sprint Goal, which is a short description of what the Sprint will achieve.
 \end{itemize}
 
-\textbf{Example Scenario:}
-
-Before starting a two-week Sprint, Sarah (Product Owner) presents the top items
-from the Product Backlog related to study group search. The Development Team
-estimates the effort required for each item and commits to completing specific
-tasks like "Implement search algorithm," "Design search results display," and
-"Write unit tests for search functionality." They then define the Sprint Goal
-as "Develop a functional prototype of the study group search feature."
+\begin{examplecard}{Sprint Planning Session}
+Before starting a two-week Sprint, Sarah (Product Owner) presents the top items from the Product Backlog related to study group search. The Development Team estimates the effort required for each item and commits to completing specific tasks like ``Implement search algorithm,'' ``Design search results display,'' and ``Write unit tests for search functionality.'' They then define the Sprint Goal as ``Develop a functional prototype of the study group search feature.''
+\end{examplecard}
 
 \subsubsection{Daily Scrum}
 
@@ -1001,14 +1024,9 @@ and create a plan for the next 24 hours.
   \item \textbf{Focus on Progress}: The Daily Scrum is not a problem-solving session. If issues are identified, they should be addressed outside of the Daily Scrum.
 \end{itemize}
 
-\textbf{Example Scenario:}
-
-Each morning, the Development Team meets for 15 minutes. Each member answers
-the three questions. For example, Alice might say, "Yesterday, I implemented
-the search algorithm. Today, I will design the search results display. I don't
-see any impediments." If Bob mentions he's having trouble connecting to the
-database, David (Scrum Master) will take note and address it after the Daily
-Scrum.
+\begin{examplebox}{Daily Scrum Meeting Scenario}
+Each morning, the Development Team meets for 15 minutes. Each member answers the three questions. For example, Alice might say, ``Yesterday, I implemented the search algorithm. Today, I will design the search results display. I don't see any impediments.'' If Bob mentions he's having trouble connecting to the database, David (Scrum Master) will take note and address it after the Daily Scrum.
+\end{examplebox}
 
 \subsubsection{Sprint Review}
 
@@ -1026,6 +1044,7 @@ the Product Owner and stakeholders.
   \item \textbf{Determining Next Steps}: The Scrum Team discusses what to do next, potentially adjusting the Product Backlog and Sprint Goal for the next Sprint.
 \end{itemize}
 
+\textbf{Example Scenario:}
 \textbf{Example Scenario:}
 
 At the end of the two-week Sprint, the Development Team demonstrates the
@@ -1049,13 +1068,9 @@ create a plan for improvements to be enacted during the next Sprint.
   \item \textbf{Time-boxed}: This is time-boxed to reinforce that it doesn't need to be long.
 \end{itemize}
 
-\textbf{Example Scenario:}
-
-After the Sprint Review, the Development Team, Sarah, and David meet to discuss
-what went well and what could be improved. They identify that communication
-between the UI/UX designer and the backend developer could be better. As an
-action item, they decide to have the designer and developer pair program for a
-few hours each week to improve communication and collaboration.
+\begin{examplecard}{Sprint Retrospective Meeting}
+After the Sprint Review, the Development Team, Sarah, and David meet to discuss what went well and what could be improved. They identify that communication between the UI/UX designer and the backend developer could be better. As an action item, they decide to have the designer and developer pair program for a few hours each week to improve communication and collaboration.
+\end{examplecard}
 
 \textbf{Real-World Example}
 
@@ -1245,10 +1260,18 @@ bottlenecks.
 
 \subsection{Core Principles of Kanban}
 
-Kanban operates on a set of core principles that guide its implementation and
-ensure its effectiveness. These principles emphasize visualization, limiting
-work in progress, managing flow, making policies explicit, implementing
-feedback loops, and continuous improvement.
+\begin{conceptcard}{Six Core Principles of Kanban Methodology}
+Kanban operates on a set of core principles that guide its implementation and ensure its effectiveness. These principles emphasize visualization, limiting work in progress, managing flow, making policies explicit, implementing feedback loops, and continuous improvement.
+
+\begin{enumerate}
+  \item \textbf{Visualize the Workflow} - Create visual representation of work steps
+  \item \textbf{Limit Work in Progress (WIP)} - Restrict tasks in each workflow stage  
+  \item \textbf{Manage Flow} - Identify and address bottlenecks actively
+  \item \textbf{Make Policies Explicit} - Clearly define workflow rules and guidelines
+  \item \textbf{Implement Feedback Loops} - Regular meetings and data analysis for improvement
+  \item \textbf{Improve Collaboratively, Evolve Experimentally} - Continuous incremental improvement
+\end{enumerate}
+\end{conceptcard}
 
 \subsubsection{Visualize the Workflow}
 
@@ -1258,21 +1281,11 @@ service. This visualization is typically achieved using a Kanban board, which
 can be physical (e.g., a whiteboard with sticky notes) or digital (e.g., using
 tools like Jira, Trello, or Asana).
 
-\textbf{Example:} Imagine a team developing a new feature for a web application. The workflow might include steps such as:
+\begin{examplecard}{Web Application Feature Development Workflow}
+Imagine a team developing a new feature for a web application. The workflow might include steps such as: Backlog → Ready for Development → In Development → Code Review → Testing → Deployment → Done.
 
-\begin{itemize}
-  \item \textbf{Backlog}: The initial list of all potential tasks or user stories.
-  \item \textbf{Ready for Development}: Tasks that are clearly defined and ready to be worked on.
-  \item \textbf{In Development}: Tasks that are currently being worked on by developers.
-  \item \textbf{Code Review}: Tasks that have been developed and are awaiting code review.
-  \item \textbf{Testing}: Tasks that have passed code review and are being tested.
-  \item \textbf{Deployment}: Tasks that have been successfully tested and are ready to be deployed to production.
-  \item \textbf{Done}: Tasks that have been deployed and are complete.
-\end{itemize}
-
-This workflow would be represented on the Kanban board as columns, with each
-task represented by a card (sticky note or digital entry) that moves from left
-to right as it progresses through the workflow.
+This workflow would be represented on the Kanban board as columns, with each task represented by a card (sticky note or digital entry) that moves from left to right as it progresses through the workflow.
+\end{examplecard}
 
 \textbf{Counterexample:} A team that does not visualize its workflow might rely solely on verbal communication or lengthy email threads to track progress. This can lead to confusion, missed deadlines, and a lack of transparency.
 
@@ -1283,7 +1296,9 @@ restrict the number of tasks that can be in a given stage of the workflow at
 any one time. This helps to prevent bottlenecks, encourages focus, and improves
 overall efficiency.
 
-\textbf{Example:} In the web application feature development example, the team might decide to limit the number of tasks in the "In Development" column to three. This means that developers can only work on a maximum of three tasks at any one time. If a developer completes a task, they can then pull a new task from the "Ready for Development" column. If the "In Development" column is full, developers must help move tasks forward in the workflow (e.g., by assisting with code reviews or testing) before starting new work.
+\begin{examplecard}{WIP Limits in Practice}
+In the web application feature development example, the team might decide to limit the number of tasks in the ``In Development'' column to three. This means that developers can only work on a maximum of three tasks at any one time. If a developer completes a task, they can then pull a new task from the ``Ready for Development'' column. If the ``In Development'' column is full, developers must help move tasks forward in the workflow (e.g., by assisting with code reviews or testing) before starting new work.
+\end{examplecard}
 
 \textbf{Counterexample:} A team that does not limit WIP might allow developers to start as many tasks as they want, leading to context switching, reduced focus, and ultimately slower completion times. Tasks may sit idle for extended periods, and the team may struggle to identify and resolve bottlenecks.
 
@@ -1293,18 +1308,15 @@ Kanban emphasizes managing the flow of work through the system. This involves
 identifying and addressing bottlenecks, optimizing processes, and ensuring that
 tasks move smoothly from start to finish.
 
-\textbf{Example:} Using the same web application feature development example, the team notices that the "Code Review" column is consistently overloaded, with tasks spending a significant amount of time waiting for review. This indicates a bottleneck. To address this, the team might:
-
+\begin{examplecard}{Managing Flow and Bottlenecks}
+Using the same web application feature development example, the team notices that the ``Code Review'' column is consistently overloaded, with tasks spending a significant amount of time waiting for review. This indicates a bottleneck. To address this, the team might:
 \begin{itemize}
-  \item Allocate more resources to code review (e.g., train additional developers to
-        perform code reviews).
+  \item Allocate more resources to code review (e.g., train additional developers to perform code reviews).
   \item Implement code review guidelines to streamline the review process.
-  \item Break down large tasks into smaller, more manageable chunks to facilitate
-        faster reviews.
+  \item Break down large tasks into smaller, more manageable chunks to facilitate faster reviews.
 \end{itemize}
-
-By monitoring the flow of work and addressing bottlenecks, the team can improve
-its overall efficiency and reduce lead times.
+By monitoring the flow of work and addressing bottlenecks, the team can improve its overall efficiency and reduce lead times.
+\end{examplecard}
 
 \textbf{Counterexample:} A team that doesn't actively manage flow might ignore bottlenecks or address them reactively. This can lead to long lead times, reduced throughput, and frustrated team members.
 
@@ -1373,15 +1385,16 @@ Kanban cards represent individual tasks or work items. Each card contains
 information about the task, such as its description, priority, assignee, and
 due date.
 
-\textbf{Example:} A Kanban card for a web application feature might include the following information:
-
+\begin{examplecard}{Kanban Card Structure}
+A Kanban card for a web application feature might include the following information:
 \begin{itemize}
-  \item \textbf{Title}: "Implement User Authentication"
-  \item \textbf{Description}: "Implement user authentication using OAuth 2.0."
+  \item \textbf{Title}: ``Implement User Authentication''
+  \item \textbf{Description}: ``Implement user authentication using OAuth 2.0.''
   \item \textbf{Priority}: High
   \item \textbf{Assignee}: John Doe
-  \item \textbf{Due Date}: 2024-01-31
+  \item \textbf{Due Date}: 2024--01--31
 \end{itemize}
+\end{examplecard}
 
 \subsubsection{Kanban Columns}
 
@@ -1396,7 +1409,9 @@ as they progress through the workflow.
 WIP limits restrict the number of tasks that can be in a given column at any
 one time. This helps to prevent bottlenecks and encourages focus.
 
-\textbf{Example:} The "In Development" column might have a WIP limit of three, meaning that developers can only work on a maximum of three tasks at any one time.
+\begin{examplecard}{WIP Limit Implementation}
+The ``In Development'' column might have a WIP limit of three, meaning that developers can only work on a maximum of three tasks at any one time.
+\end{examplecard}
 
 \subsubsection{Kanban Metrics}
 
