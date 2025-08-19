@@ -16,6 +16,12 @@
 \usepackage{fontawesome5}
 \usepackage{xcolor}
 
+% Font packages for Palatino and Sans Serif
+\usepackage{mathpazo} % Palatino for main text (very popular serif font)
+\usepackage[scaled=0.9]{helvet} % Helvetica (Sans Serif) for headings
+\usepackage{sectsty} % For customizing section headings
+\usepackage{titlesec} % For advanced section title formatting
+
 % Define custom colors for visual elements
 \definecolor{primaryblue}{RGB}{41, 128, 185}
 \definecolor{successgreen}{RGB}{39, 174, 96}
@@ -23,6 +29,23 @@
 \definecolor{dangerred}{RGB}{231, 76, 60}
 \definecolor{lightgray}{RGB}{236, 240, 241}
 \definecolor{darkgray}{RGB}{52, 73, 94}
+\definecolor{maroon}{HTML}{800000} % Custom maroon color for headings and bold text
+
+% Override lmodern from modulestyle and set main font to Palatino
+\renewcommand{\rmdefault}{ppl} % Palatino font family
+\renewcommand{\familydefault}{\rmdefault}
+
+% Configure section headings with Sans Serif font and maroon color
+\allsectionsfont{\sffamily\color{maroon}}
+
+% Configure chapter headings
+\titleformat{\chapter}[display]
+{\sffamily\huge\bfseries\color{maroon}}
+{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+% Configure bold text to be maroon colored
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{\oldtextbf{\color{maroon}#1}}
 
 % Custom card environment for key concepts
 \newtcolorbox{conceptcard}[1]{
