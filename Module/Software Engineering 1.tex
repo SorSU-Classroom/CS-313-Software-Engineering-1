@@ -94,6 +94,27 @@
     bottom=4pt
 }
 
+% Side-by-side example and counterexample card
+\newtcolorbox{examplecountercard}{
+    colback=white,
+    colframe=primaryblue!80,
+    fonttitle=\bfseries,
+    title=\faBalanceScale\ Examples and Counterexamples,
+    arc=5pt,
+    boxrule=1.5pt,
+    left=8pt,
+    right=8pt,
+    top=8pt,
+    bottom=8pt,
+    sidebyside,
+    sidebyside align=top seam,
+    sidebyside gap=6mm,
+    lefthand width=0.47\linewidth,
+    lower separated=false,
+    before upper={\textbf{\textcolor{successgreen}{\faCheck\ Example:}}\\[0.5em]},
+    before lower={\textbf{\textcolor{dangerred}{\faTimes\ Counterexample:}}\\[0.5em]}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
