@@ -15,6 +15,16 @@
 \usepackage{tikz}
 \usepackage{fontawesome5}
 \usepackage{xcolor}
+\usepackage{hyperref} % For clickable links
+
+% Configure hyperref for better link appearance
+\hypersetup{
+    colorlinks=true,
+    linkcolor=maroon,
+    urlcolor=blue,
+    citecolor=maroon,
+    filecolor=maroon
+}
 
 % Font packages for Palatino and Sans Serif
 \usepackage{mathpazo} % Palatino for main text (very popular serif font)
@@ -266,17 +276,6 @@
 
 \input{C8 - End-to-End Testing with Playwright.tex}
 
-\chapter{References}
-
-\begin{enumerate}[label={\Alph*.}]
-  \item \textbf{Books}
-        \begin{itemize}
-          \item
-        \end{itemize}
-  \item \textbf{Other Sources}
-        \begin{itemize}
-          \item
-        \end{itemize}
-\end{enumerate}
+\input{__References.tex}
 
 \end{document}
